@@ -1,6 +1,6 @@
 
 variable "region" {
-  default = "eu-west-1"
+  default = "ap-southeast-1"
 }
 variable "Name" {
   default = "test"
@@ -14,7 +14,7 @@ provider "aws" {
   region = "${var.region}"
 }
 
-resource "aws_vpc" "${var.Name}" {
+resource "aws_vpc" "vpc1" {
   cidr_block       = "${var.cidr_block}"
   instance_tenancy = "default"
 
